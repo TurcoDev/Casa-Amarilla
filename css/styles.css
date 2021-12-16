@@ -53,10 +53,9 @@ li{
 	height: 100vh;
 }
 
-/*
+/*--------------------
 -----navbar-nav-----
---------------------
-*/
+--------------------*/
 .top-header {
   width: 100%;
 }
@@ -161,3 +160,309 @@ nav a#pull {
   100% {margin-top: 20px;}
 }
 
+/**
+ * *************************************************************
+ * MAIN
+ * *************************************************************
+**/
+
+h3{
+  font-family: 'Poppins', sans-serif;
+  color: var(--font-color-main);
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 1px #000;
+}
+
+.subtitle{
+  padding: 20px 0;
+}
+/*-----------------------------
+--->>>  we section  <<<----
+-----------------------------*/
+
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0 50px 50px 50px;
+  justify-content: start;
+  background-color: var(--yellow-color);
+  row-gap: 0;
+  column-gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.we-section .grid-container .subtitle{
+  grid-column: 1 / span 2;
+}
+
+.we-grid-img img{
+  width: 100%;
+  /* box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5); */
+  box-shadow: 5px 5px 10px #000;
+}
+
+.we-grid-text p {
+  font-size: 1.3em;
+  margin: 1em;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+
+/*-----------------------------
+--->>> Actor-section  <<<----
+-------------------------------*/
+
+.actor-section {
+  padding: 0 0 3em 0;
+  background-color: var(--back-color);
+}
+
+.grid-container-actors{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 0 50px 50px 50px;
+  justify-content: start;
+  /* background-color: var(--yellow-color); */
+  row-gap: 0;
+  column-gap: 50px;
+  justify-content: center;
+}
+
+.grid-container-actors .subtitle{
+  grid-column: 1 / span 4;
+  margin: 20px 0;
+}
+
+.gallery-box {
+  width: 100%;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.gallery-box h4 {
+  font-size: 1.3em;
+  margin: 1em;
+  font-weight: 500;
+}
+.gallery-box p {
+  text-align: start;
+  font-size: 1em;
+  margin: 1em;
+  font-weight: 400;
+  line-height: 1.8em;
+}
+
+.gallery-box .image-box{
+  /* box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5); */
+  overflow: hidden;
+}
+
+.gallery-box .image-box img{
+  width: 100%;
+  max-height: fit-content;
+}
+
+.gallery-box .image-box img:hover{
+  transform: scale(1.2);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* Efecto 1 */
+.gallery-box .image-box1 img{
+  width: 100%;
+  transition: transform 1s, filter 2s ease-in-out;
+  filter: blur(2px);
+  transform: scale(1.2);
+}
+
+.gallery-box .image-box1 img:hover{
+  filter: blur(0);
+  transform: scale(1);
+}
+
+/* Efecto 2 */
+.gallery-box .image-box2 img{
+  width: 100%;
+  transition: transform .5s, filter 1.5s ease-in-out;
+  filter: grayscale(100%);
+}
+
+.gallery-box .image-box2 img:hover{
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+/* Efecto 3 */
+.gallery-box .image-box3 img{
+  width: 100%;
+  transition: transform .5s ease-in-out;
+}
+
+.gallery-box .image-box3 img:hover{
+  transform: scale(1.5) rotate(10deg);
+}
+
+/*-------------------------------
+-->>> work-section (Slider) <<<--
+-------------------------------*/
+
+.works{
+  background-color: #1e7c13;
+}
+
+.hello {
+  opacity: 1 !important;
+}
+.full {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.full .content {
+  background-color: rgba(0,0,0,0.75) !important;
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+.full .content img {
+  left: 50%;
+  transform: translate3d(0, 0, 0);
+  animation: zoomin 1s ease;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+.byebye {
+  opacity: 0;
+}
+.byebye:hover {
+  transform: scale(0.2) !important;
+}
+.gallery {
+  display: grid;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 8px;
+}
+.gallery img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 16px #333;
+  transition: all 1.5s ease;
+}
+.gallery img:hover {
+  box-shadow: 0 0 32px #333;
+}
+.gallery .content {
+  padding: 4px;
+}
+.gallery .gallery-item {
+  transition: grid-row-start 300ms linear;
+  transition: transform 300ms ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.gallery .gallery-item:hover {
+  transform: scale(1.025);
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+}
+@-moz-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
