@@ -1,0 +1,163 @@
+/**
+ * *************************************************************
+ * GENERAL
+ * *************************************************************
+**/
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body {
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  /* background:  var(--orange-color); */
+  color: var(--font-color-main);
+}
+
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+/**
+ * *************************************************************
+ * SLIDER-CSS
+ * *************************************************************
+**/
+
+#home {
+  background-image: url(../images/casa.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  position: relative;
+  margin: 0 auto;
+}
+
+/**
+ * *************************************************************
+ * HEADER
+ * *************************************************************
+**/
+.header{
+	height: 100vh;
+}
+
+/*
+-----navbar-nav-----
+--------------------
+*/
+.top-header {
+  width: 100%;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    right: 0;
+    margin-right: 7%;
+}
+
+.top-nav ul {
+  width: 100%;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.top-nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.top-nav ul li a{
+  display: block;
+  color: rgb(220, 231, 114);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.top-nav ul li.active a,
+.top-nav ul li a:hover {
+  border-bottom: 2px solid rgb(220, 231, 114);
+}
+
+/**** top-nav *****/
+nav {
+  position: relative;
+  padding: 0 15px;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  display: inline;
+  position: relative;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+nav a#pull {
+  display: none;
+}
+
+.title-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-shadow: 6px 6px 5px #000;
+  font-family: 'Arizonia', cursive;
+  height: 90%;
+}
+
+.title-container h1{
+  font-size: 900%;
+  text-align: center;
+}
+
+.title-container p{
+  font-size: 500%;
+  text-align: center;
+}
+
+.scroll-mouse{
+  margin: 0 auto;
+  height: 10%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--font-color-main);
+}
+
+.arrow{
+  animation-name: animated-arrow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animated-arrow {
+  0%   {margin-top: 0;}
+  15%  {margin-top: 2px;}
+  25%  {margin-top: 5px;}
+  50%  {margin-top: 10px;}
+  75%  {margin-top: 15px;}
+  100% {margin-top: 20px;}
+}
+
