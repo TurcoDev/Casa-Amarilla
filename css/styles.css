@@ -1,5 +1,22 @@
 /**
  * *************************************************************
+ * VARIABLES
+ * *************************************************************
+**/
+:root{
+	--decoration-color: #644113;
+	--border-nav: 2px solid #fff;
+  --back-color: #165c91;
+  --font-color-main: #fff;
+  --highlight-color: #f0e923;
+  --orange-color: #ef9809;
+  --yellow-color: #b69c00;
+  /* #d4b22c; */
+
+}
+
+/**
+ * *************************************************************
  * GENERAL
  * *************************************************************
 **/
@@ -200,7 +217,6 @@ h3{
 
 .we-grid-img img{
   width: 100%;
-  /* box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5); */
   box-shadow: 5px 5px 10px #000;
 }
 
@@ -225,7 +241,6 @@ h3{
   grid-template-columns: auto auto auto auto;
   padding: 0 50px 50px 50px;
   justify-content: start;
-  /* background-color: var(--yellow-color); */
   row-gap: 0;
   column-gap: 50px;
   justify-content: center;
@@ -465,4 +480,67 @@ h3{
     max-width: 100%;
     transform: rotate(0deg);
   }
+}
+
+/*-------------------------------
+-->>>      Footer           <<<--
+-------------------------------*/
+
+/*---------/footer-------*/
+footer {
+  padding: 0.7em 0;
+  background: #1e2b38;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .redes {
+  height: 20vh;
+  padding: 25px 0;
+}
+
+footer .redes .contenedor {
+  display: flex;
+  justify-content: center;
+}
+
+footer .redes a {
+  color: white;
+  text-align: center;
+  width: 100px;
+  display: block;
+  padding: 15px 0;
+  border-radius: 3px;
+  font-size: 30px;
+  margin: 0 20px;
+}
+
+footer .redes .twitter:hover {
+  background: #1da1f2;
+}
+
+footer .redes .facebook:hover {
+  background: #3b5998;
+}
+
+footer .redes .youtube:hover {
+  background: #cd201f;
+}
+
+footer .redes .instagram:hover {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+}
+
+.logo-footer{
+  text-align: center;
+}
+
+.logo-footer img{
+  width: 100px;
+}
+
+.copyright{
+  margin: 50px;
 }
