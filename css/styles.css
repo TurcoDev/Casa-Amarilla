@@ -30,7 +30,6 @@ html,
 body {
   font-size: 100%;
   font-family: "Montserrat", sans-serif;
-  /* background:  var(--orange-color); */
   color: var(--font-color-main);
 }
 
@@ -89,6 +88,7 @@ li{
   width: 100%;
   padding: 0;
   margin-top: 20px;
+  text-align: center;
 }
 
 .top-nav ul li {
@@ -145,12 +145,12 @@ nav a#pull {
 }
 
 .title-container h1{
-  font-size: 900%;
+  font-size: 7rem;
   text-align: center;
 }
 
 .title-container p{
-  font-size: 500%;
+  font-size: 4rem;
   text-align: center;
 }
 
@@ -201,28 +201,32 @@ h3{
 
 .grid-container{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  align-items: center;
   padding: 0 50px 50px 50px;
-  justify-content: start;
   background-color: var(--yellow-color);
   row-gap: 0;
-  column-gap: 50px;
-  align-items: center;
-  justify-content: center;
+  column-gap: 0;
 }
 
 .we-section .grid-container .subtitle{
   grid-column: 1 / span 2;
 }
 
+.we-grid-img{
+  text-align: center;
+}
+
 .we-grid-img img{
-  width: 100%;
+  width: 80%;
   box-shadow: 5px 5px 10px #000;
 }
 
 .we-grid-text p {
   font-size: 1.3em;
   margin: 1em;
+  text-align: justify;
   font-weight: 400;
   line-height: 1.8em;
 }
@@ -238,12 +242,11 @@ h3{
 
 .grid-container-actors{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  place-content: center;
+  grid-template-columns: repeat(4, 1fr);
   padding: 0 50px 50px 50px;
-  justify-content: start;
   row-gap: 0;
   column-gap: 50px;
-  justify-content: center;
 }
 
 .grid-container-actors .subtitle{
@@ -275,7 +278,6 @@ h3{
 }
 
 .gallery-box .image-box{
-  /* box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5); */
   overflow: hidden;
 }
 
@@ -352,6 +354,7 @@ h3{
   height: 100%;
   width: 100%;
   display: grid;
+  place-content: center;
 }
 .full .content img {
   left: 50%;
@@ -369,6 +372,7 @@ h3{
 }
 .gallery {
   display: grid;
+  place-content: center;
   grid-column-gap: 8px;
   grid-row-gap: 8px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -482,9 +486,11 @@ h3{
   }
 }
 
-/*-------------------------------
--->>>      Footer           <<<--
--------------------------------*/
+/**
+ * *************************************************************
+ * FOOTER
+ * *************************************************************
+**/
 
 /*---------/footer-------*/
 footer {
@@ -497,24 +503,33 @@ footer {
 }
 
 footer .redes {
-  height: 20vh;
+  /* height: 30vh; */
   padding: 25px 0;
 }
 
-footer .redes .contenedor {
+footer .redes ul {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+footer .redes ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 3px;
+  margin: 0 20px;
+  align-self: center;
 }
 
 footer .redes a {
   color: white;
   text-align: center;
-  width: 100px;
-  display: block;
-  padding: 15px 0;
-  border-radius: 3px;
   font-size: 30px;
-  margin: 0 20px;
 }
 
 footer .redes .twitter:hover {
@@ -543,4 +558,92 @@ footer .redes .instagram:hover {
 
 .copyright{
   margin: 50px;
+}
+
+
+/*-------------------------------
+-->>>     Media Queries    <<<--
+-------------------------------*/
+
+@media only screen and (max-width: 900px) {
+  .we-grid-text p{
+    font-size: 1rem;
+  }
+
+  .grid-container-actors{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-container-actors .subtitle{
+    grid-column: 1 / span 2;
+  }
+
+  .grid-container-actors .gallery-box{
+    /* grid-column: 1 / span 2; */
+    /* align-self: center; */
+  }
+
+
+}
+
+
+@media only screen and (max-width: 700px) {
+  .title-container h1{
+    font-size: 6rem;
+  }
+
+  .title-container p{
+    font-size: 3rem;
+  }
+  
+  .we-grid-text p{
+    font-size: .9rem;
+  }
+
+  .grid-container{
+    grid-template-columns: 1fr;
+  }
+
+  .grid-container .subtitle, .grid-container .we-grid-img, .grid-container .we-grid-text{
+    grid-column: 1 / span 1;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+
+}
+
+@media only screen and (max-width: 390px) {
+  .title-container h1{
+    font-size: 4rem;
+  }
+
+  .title-container p{
+    font-size: 2rem;
+  }
+
+  .we-grid-text p{
+    font-size: .7rem;
+  }
+
+  .grid-container-actors{
+    grid-template-columns: 1fr;
+  }
+
+  .grid-container-actors .subtitle{
+    grid-column: 1 / span 1;
+  }
+
+
+  .we-grid-img{
+    /* grid-template-columns: auto auto; */
+    /* grid-column: 1 / span 2; */
+  }
+
+  .grid-container-actors .gallery-box{
+    /* grid-column: 1 / span 2; */
+    /* align-self: center; */
+  }
+
+
 }
